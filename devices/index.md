@@ -44,4 +44,4 @@ event ы в этот канал (e.g. `NewMessage`, `NewTask`, `DocumentResolute
 
 
 
-[back](./)
+[back](..)
