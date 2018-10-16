@@ -3,8 +3,8 @@
 
 
 ```
-GET  api_url/messages/{@type}/updated[?@params]
-RESP @pagination
+@GET  @api_url/messages/{@type}/updated[?@params]
+@RESP @pagination
 ```
 где 
 
@@ -21,9 +21,6 @@ reports | отчеты (в разработке)
 ключ | тип | описание 
 ---|---|---
 from | DateTime |минимальная дата обновления, формат `Y-m-d H:i:s`
-
-<h5>Ответ</h5>
-`@pagination`
 
 
 <h5>Примеры</h5>

@@ -1,20 +1,39 @@
 <h4>Базовые переменные и определения</h4>
 
-`@api_url` - https://admin.docent.uz/api
+<h6>Обозначения по запросам</h6>
 
+`@api_url` - https://admin.docent.uz/api
 
 `@api_url_v1` - https://admin.docent.uz/api/v1
 
 `@GET|@POST|@POST|@PUT` - глаголы запроса
 
-`@RESP` - возвращаемый ответ
-
-
 `some_url[@somevalue]` - необязательный параметр `@somevalue` в запросе
 
 `some_url{@somevalue}` - обязательный параметр `@somevalue` в запросе
 
-`@pagination` - cтруктура ответа пагинации, имеет следующий вид
+`@throttle limit, minutes` - ограничения по количеству запросов в минуту по url-у. Например, `@throttle 5, 1` - максимум 5 запросов в минуту по url-у
+
+<h6>Обозначения по респонсам</h6>
+
+`@RESP` - возвращаемый ответ
+
+`@record` - Одна сущность
+```json
+{
+  "name": "docent",
+  "version": "0.1.2-dev",
+  "author": "standart it sektor"
+}
+```
+
+`@collection` - коллекция записей ввиде массива
+```json
+[{"name": "doc"}, {"name": "ent"}]
+```
+
+
+`@pagination` - ответа в виде пагинации, имеет следующую структуру:
 ```json
 {
   "current_page": 1,
